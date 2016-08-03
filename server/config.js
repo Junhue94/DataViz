@@ -15,15 +15,10 @@ var routes = require('./routes');
 
 var app = express();
 
-app.set('env', process.env.NODE_ENV || 'development');
-
 // Database Connection
 // Setup connection to database
-if (app.get('env') === 'development') {
-    mongoose.connect('mongodb://localhost/dataviz');
-} else {
-    //mongoose.connect('mongodb://kingqueen:jycircles88@ds139735.mlab.com:39735/queuenow');
-}
+mongoose.connect('mongodb://localhost/dataviz');
+
 
 // Test Database Connection
 var db = mongoose.connection;

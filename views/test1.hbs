@@ -1,0 +1,153 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        color: #fff;
+    }
+
+    body {
+        font-size: 12px;
+        line-height: 20px;
+        background: #111;
+        padding: 30px 0;
+        text-align: center;
+        font-family: Arial, Verdana, sans-serif;
+    }
+
+    #wrapper {
+        width: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    #chart, #form_values {
+        width: 559px;
+    }
+
+    #chart {
+        list-style: none;
+        border-left: solid 1px #666;
+        border-bottom: solid 1px #666;
+        margin-bottom: 20px;
+    }
+
+    #chart li, #chart li span {
+        height: 20px;
+    }
+
+    #chart li .percent {
+        width: 30px;
+        position: absolute;
+        top: 0;
+        right: -40px;
+        text-align: right;
+    }
+
+    #chart li {
+        position: relative;
+        display: block;
+        width: 554px;
+        margin: 0 0 5px 5px;
+        text-align: left;
+    }
+
+    #chart li .bar {
+        width: 0;
+    }
+
+    .red .bar {
+        background: red;
+    }
+
+    .blue .bar {
+        background: blue;
+    }
+
+    .yellow .bar {
+        background: yellow;
+    }
+
+    .orange .bar {
+        background: orange;
+    }
+
+    .purple .bar {
+        background: purple;
+    }
+
+    .field {
+        padding: 3px;
+        width: 50px;
+        border: solid 1px #000;
+        float: left;
+        margin-right: 5px;
+        color: #333;
+    }
+</style>
+
+<section id="wrapper">
+    <ul id="chart">
+        <li title="25" class="red">
+            <span class="bar"></span>
+            <span class="percent"></span>
+        </li>
+        <li title="80" class="blue">
+            <span class="bar"></span>
+            <span class="percent"></span>
+        </li>
+        <li title="60" class="yellow">
+            <span class="bar"></span>
+            <span class="percent"></span>
+        </li>
+        <li title="50" class="orange">
+            <span class="bar"></span>
+            <span class="percent"></span>
+        </li>
+        <li title="100" class="purple">
+            <span class="bar"></span>
+            <span class="percent"></span>
+        </li>
+    </ul>
+
+    <form id="form_values" action="" method="post">
+        <input name="" id="li_1" value="25" class="field">
+        <input name="" id="li_2" value="80" class="field">
+        <input name="" id="li_3" value="65" class="field">
+        <input name="" id="li_4" value="50" class="field">
+        <input name="" id="li_5" value="100" class="field">
+    </form>
+</section>
+
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+
+<script>
+    $(function () {
+        $('#chart li').each(function () {
+            var pc = $(this).attr('title');
+            /*If pc > 100, pc = 100, else pc = pc*/
+            pc = pc > 100 ? 100 : pc;
+            $(this).children('.percent').html(pc + '%');
+
+            var ww = $(this).width();
+            var len = parseInt(ww, 10) * parseInt(pc, 10) / 100;
+            $(this).children('.bar').animate({'width' : len + 'px'}, 1500);
+
+        })
+    });
+
+    $('#form_values input').blur(function () {
+        var id = $(this).attr('id').split('_');
+        var v = $(this).val();
+        if (v > 100) {
+            v = 100;
+            $(this).val(v);
+        }
+        $('#chart li:nth-child('+id[1]+')').children('.percent').html(v + '%');
+
+        var ww = $('#chart li:first-child').width();
+        var len = parseInt(ww, 10) * parseInt(v, 10) / 100;
+        $('#chart li:nth-child('+id[1]+')').children('.bar').animate({'width': len + 'px'}, 1500);
+    });
+</script>
