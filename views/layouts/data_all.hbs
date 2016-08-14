@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+    <!--Foundation-->
+    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/foundation.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <!--NVD3-->
+    <link rel="stylesheet" href="/node_modules/nvd3/build/nv.d3.css">
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="/stylesheets/all_custom.css">
+</head>
+
+<body id="data_all_layout">
+    <header>
+        {{> webpage_header}}
+    </header>
+
+    <!--Main Container-->
+    <div id="main_container" class="column row expanded">
+        <!--Sec Container-->
+        <div id="sec_container" class="row">
+            <!--Sidebar-->
+            <div id="sidebar" class="small-1 medium-3 large-2 columns display-table-cell">
+                <!--Search Bar-->
+                <div id="search_bar" class="hide-for-small-only">
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <!--Sidebar - Medium / Large Screen-->
+                <ul id="screen_med_large" class="vertical menu hide-for-small-only" data-accordion-menu>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+                            <span>Demographics</span>
+                            <span class="data_cat_total float-right">(15)</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-database" aria-hidden="true"></i></span>
+                            <span>Currency</span>
+                        </a>
+                        <ul class="menu vertical nested">
+                            <li><a href="#">Records<span class="data_cat_total float-right">(9)</span></a></li>
+                            <li><a href="#">Students<span class="data_cat_total float-right">(20)</span></a></li>
+                            <li><a href="#">Instructors<span class="data_cat_total float-right">(33)</span></a></li>
+                            <li><a href="#">Classes<span class="data_cat_total float-right">(7)</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            <span>Politics</span>
+                            <span class="data_cat_total float-right">(4)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-cog" aria-hidden="true"></i></span>
+                            <span>Economy</span>
+                            <span class="data_cat_total float-right">(155)</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!--Sidebar - Small Screen-->
+                <ul id="screen_small" class="vertical dropdown menu show-for-small-only" data-dropdown-menu>
+                    <li> <!--Dashboard-->
+                        <a href="#">
+                            <span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+
+                    <li> <!--Charts-->
+                        <a href="#">
+                            <span><i class="fa fa-database" aria-hidden="true"></i></span>
+                        </a>
+                        <ul class="menu">
+                            <li><a href="#">Records</a></li>
+                            <li><a href="#">Students</a></li>
+                            <li><a href="#">Instructors</a></li>
+                            <li><a href="#">Classes</a></li>
+                        </ul>
+                    </li>
+                    <li> <!--Tags-->
+                        <a href="#">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li> <!--Settings-->
+                        <a href="#">
+                            <span><i class="fa fa-cog" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Content-->
+            <div id="content" class="small-11 medium-9 large-10 columns display-table-cell">
+                {{{body}}}
+            </div> <!--End Content-->
+        </div><!--End Sec Container-->
+    </div><!--End Main Container-->
+
+
+    <!--Foundation-->
+    <script src="/node_modules/foundation-sites/vendor/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/foundation-sites/.customizer/js/vendor/foundation.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        });
+    </script>
+
+</body>
+
+</html>

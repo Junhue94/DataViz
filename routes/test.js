@@ -8,5 +8,10 @@ router.get('/1', function(req, res, next) {
     });
 });
 
+router.get('/2', function(req, res, next) {
+    res.render('test2', {
+        title: 'Test2'
+    });
+});
 
 module.exports = router;

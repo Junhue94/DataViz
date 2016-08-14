@@ -1,0 +1,26 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+
+<script>
+    var dataArray = [20, 30, 40];
+
+    var canvas = d3.select("body")
+            .append("svg")
+            .attr("width", 500)
+            .attr("height", 500)
+            .text("you");
+
+    var bars = canvas.selectAll("rect")
+            .data(dataArray)
+            .enter()
+            .append("rect")
+            .attr("width", function (d) {return d * 10;})
+            .attr("height", 50)
+            .attr("y", function (d, i) {return i * 100});
+
+    var circle = canvas.append("circle")
+            .attr("cx", 250)
+            .attr("cy", 250)
+            .attr("r", 50)
+            .attr("fill", "red");
+</script>

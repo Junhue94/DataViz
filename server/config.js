@@ -15,9 +15,14 @@ var routes = require('./routes');
 
 var app = express();
 
+// Set Environment
+app.set('env', 'development');
+
 // Database Connection
 // Setup connection to database
-mongoose.connect('mongodb://localhost/dataviz');
+mongoose.Promise = global.Promise;
+//mongoose.connect('mongodb://localhost/dataviz');
+mongoose.connect('mongodb://jycircles:zx55878@ds153815.mlab.com:53815/dataviz');
 
 
 // Test Database Connection
@@ -124,7 +129,6 @@ app.use(function(err, req, res, next) {
         });
     }
 });
-
 
 // Development Error Handler
 if (app.get('env') === 'development') {

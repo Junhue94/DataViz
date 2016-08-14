@@ -1,0 +1,206 @@
+#data_all_layout {
+  height: 100%; }
+  #data_all_layout #main_container {
+    display: table;
+    padding: 0;
+    height: 100%; }
+    #data_all_layout #main_container #sec_container {
+      display: table-row;
+      height: 100%; }
+      #data_all_layout #main_container #sec_container .display-table-cell {
+        display: table-cell;
+        float: none;
+        vertical-align: top; }
+      #data_all_layout #main_container #sec_container #sidebar {
+        height: 100%;
+        padding: 0;
+        background: #000000;
+        color: white; }
+        #data_all_layout #main_container #sec_container #sidebar #search_bar {
+          padding: 10px 7px; }
+          #data_all_layout #main_container #sec_container #sidebar #search_bar input {
+            vertical-align: center;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: none;
+            margin: 0;
+            height: 100%; }
+        #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large li a {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: block; }
+            #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large li a .data_cat_total {
+              font-size: 0.8rem;
+              font-weight: normal;
+              color: #b5b5b5; }
+            #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large li a i {
+              margin: 0 10px 0 0; }
+          #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large li a:after {
+            border-color: #fffcdf transparent transparent; }
+          #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large li ul li {
+            border-left: 5px solid #005f00; }
+            #data_all_layout #main_container #sec_container #sidebar ul#screen_med_large li ul li a {
+              padding: 15px;
+              font-size: 0.8rem; }
+        #data_all_layout #main_container #sec_container #sidebar ul#screen_small {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          #data_all_layout #main_container #sec_container #sidebar ul#screen_small li a {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: block; }
+            #data_all_layout #main_container #sec_container #sidebar ul#screen_small li a i {
+              margin: 0 10px 0 0; }
+          #data_all_layout #main_container #sec_container #sidebar ul#screen_small li a:after {
+            border-color: #fffcdf transparent transparent; }
+          #data_all_layout #main_container #sec_container #sidebar ul#screen_small li ul {
+            background: black; }
+            #data_all_layout #main_container #sec_container #sidebar ul#screen_small li ul li {
+              line-height: 1; }
+              #data_all_layout #main_container #sec_container #sidebar ul#screen_small li ul li a {
+                font-size: 0.7rem; }
+
+#layout_dash_master {
+  background: url("../images/background/chalkboard1.jpg") fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#layout_dash_master .no-padding {
+  padding: 0; }
+#layout_dash_master .no-margin {
+  margin: 0; }
+#layout_dash_master .label {
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: #00e5da;
+  color: black;
+  border-radius: 5px; }
+#layout_dash_master #sidebar {
+  padding: 5px; }
+  #layout_dash_master #sidebar ul .sidebar-menu-list {
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    border-radius: 5px; }
+    #layout_dash_master #sidebar ul .sidebar-menu-list a {
+      color: #fffcdf; }
+    #layout_dash_master #sidebar ul .sidebar-menu-list a:after {
+      border-color: #fffcdf transparent transparent; }
+  #layout_dash_master #sidebar ul li#image_holder {
+    text-align: center; }
+    #layout_dash_master #sidebar ul li#image_holder img {
+      margin: 15px 0 0 0;
+      height: 60%;
+      width: 60%;
+      border-radius: 50%;
+      border: 2px solid floralwhite; }
+    #layout_dash_master #sidebar ul li#image_holder p {
+      margin: 10px 0 15px 0;
+      color: white; }
+  #layout_dash_master #sidebar ul li {
+    margin: 3px 0; }
+    #layout_dash_master #sidebar ul li a {
+      padding: 10px 10px 10px 20px; }
+      #layout_dash_master #sidebar ul li a i {
+        font-size: 1.1rem; }
+#layout_dash_master #content {
+  padding: 5px; }
+  #layout_dash_master #content #dash-header, #layout_dash_master #content #dash-title {
+    margin: 3px 0 0 0;
+    border: 1px solid white;
+    border-radius: 5px; }
+    #layout_dash_master #content #dash-header .columns, #layout_dash_master #content #dash-title .columns {
+      padding: 10px; }
+    #layout_dash_master #content #dash-header .button, #layout_dash_master #content #dash-title .button {
+      margin: 0;
+      padding: 8px 10px;
+      border-radius: 5px; }
+    #layout_dash_master #content #dash-header #menu_bar, #layout_dash_master #content #dash-title #menu_bar {
+      text-align: center; }
+    #layout_dash_master #content #dash-header ul, #layout_dash_master #content #dash-title ul {
+      list-style: none;
+      margin: 0; }
+      #layout_dash_master #content #dash-header ul li, #layout_dash_master #content #dash-title ul li {
+        float: left;
+        text-align: center;
+        margin: 0 0 0 20px;
+        padding: 5px 0;
+        width: 35px; }
+        #layout_dash_master #content #dash-header ul li span, #layout_dash_master #content #dash-title ul li span {
+          font-size: 0.7rem;
+          border-radius: 5px; }
+        #layout_dash_master #content #dash-header ul li i, #layout_dash_master #content #dash-title ul li i {
+          font-size: 1.3rem;
+          vertical-align: bottom;
+          color: #9e9e9e; }
+        #layout_dash_master #content #dash-header ul li .label, #layout_dash_master #content #dash-title ul li .label {
+          padding: 4px;
+          background: #ff5b47;
+          position: absolute;
+          margin: -7px 0 0 -10px; }
+    #layout_dash_master #content #dash-header p, #layout_dash_master #content #dash-title p {
+      margin: 0;
+      color: white; }
+
+.row {
+  margin: 3px 0 0 0; }
+
+#add_viz_data {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px; }
+  #add_viz_data .button {
+    margin: 0;
+    padding: 8px 10px;
+    border-radius: 5px; }
+
+#form-add-new-data {
+  margin: 0;
+  padding: 8px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  display: none; }
+  #form-add-new-data .form_header {
+    padding: 10px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem; }
+  #form-add-new-data .form_title p {
+    margin: 0 0 5px 0;
+    font-weight: bold; }
+  #form-add-new-data .form_title label {
+    color: white; }
+    #form-add-new-data .form_title label input {
+      height: 100%;
+      border-radius: 10px;
+      font-size: 0.9rem; }
+  #form-add-new-data button {
+    margin: 5px 0;
+    width: 100%;
+    border: none; }
+
+#data-table-row .callout {
+  margin: 0;
+  padding: 0;
+  background: transparent; }
+#data-table-row #data-table-col {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px; }
+
+/*# sourceMappingURL=all_custom.css.map */

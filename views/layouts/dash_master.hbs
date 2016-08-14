@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+    <!--Foundation-->
+    <link rel="stylesheet" href="/node_modules/foundation-sites/dist/foundation.min.css">
+    <!--DataTables-->
+    <link rel="stylesheet" href="/packages/datatables.net-zf/css/dataTables.foundation.css">
+    <link rel="stylesheet" href="/packages/datatables.net-responsive">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="/stylesheets/all_custom.css">
+</head>
+
+<body id="layout_dash_master">
+    <!--Container-->
+    <div class="row column expanded no-padding no-margin">
+        <!--SideBar-->
+        <div id="sidebar" class="small-2 medium-3 large-2 columns">
+            <ul class="vertical menu" data-accordion-menu>
+                <li id="image_holder" class="sidebar-menu-list">
+                    <img src="/images/op.jpg">
+                    <p>Username</p>
+                </li>
+                <li class="sidebar-menu-list">
+                    <a href="#">
+                        <span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+                        <span>Dashboard</span>
+                        <span class="label float-right">10</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-list">
+                    <a href="#">
+                        <span><i class="fa fa-database" aria-hidden="true"></i></span>
+                        <span>Data</span>
+                    </a>
+                    <ul class="menu vertical nested">
+                        <li><a href="#"><span class="label float-right">10</span>Records</a></li>
+                        <li><a href="#">Students</a></li>
+                        <li><a href="#">Instructors</a></li>
+                        <li><a href="#">Classes</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-list">
+                    <a href="#">
+                        <span><i class="fa fa-cog" aria-hidden="true"></i></span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Content-->
+        <div id="content" class="small-10 medium-9 large-10 columns">
+            <!--Main Header-->
+            <div id="dash-header" class="row">
+                <div id="menu-bar" class="small-2 medium-1 columns">
+                    <a class="button"><i class="fa fa-bars"></i></a>
+                </div>
+                <div class="small-10 medium-11 columns">
+                    <ul class="float-right">
+                        <li>
+                            <a href="#">
+                                <span><i class="fa fa-bell" aria-hidden="true"></i></span>
+                                <span class="label">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <span class="label">11</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><i class="fa fa-power-off" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Secondary Header-->
+            <div id="dash-title" class="row">
+                <div class="medium-12 columns">
+                    <p>{{page_title}}</p>
+                </div>
+            </div>
+
+            {{{body}}}
+        </div>
+    </div>
+
+    <!--Foundation-->
+    <script src="/node_modules/foundation-sites/vendor/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/foundation-sites/.customizer/js/vendor/foundation.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        });
+    </script>
+
+</body>
+
+</html>
