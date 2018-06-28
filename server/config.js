@@ -22,7 +22,7 @@ app.set('env', 'development');
 // Setup connection to database
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost/dataviz');
-mongoose.connect('mongodb://jycircles:zx55878@ds153815.mlab.com:53815/dataviz');
+mongoose.connect('mongodb://username:password@ds153815.mlab.com:53815/dataviz');
 
 
 // Test Database Connection
